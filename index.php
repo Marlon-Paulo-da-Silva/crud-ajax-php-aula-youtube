@@ -385,7 +385,7 @@ $(document).ready(function(){
 <div id="addEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form>
+			<form onsubmit="return cadastrarEmpresa()">
 				<div class="modal-header">						
 					<h4 class="modal-title">Adicionar Empresa</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -393,24 +393,24 @@ $(document).ready(function(){
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>Nome</label>
-						<input type="text" class="form-control" required>
+						<input id="nomeAdd" type="text" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>E-mail</label>
-						<input type="email" class="form-control" required>
+						<input id="emailAdd" type="email" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Endereço</label>
-						<textarea class="form-control" required></textarea>
+						<textarea id="enderecoAdd" class="form-control" required></textarea>
 					</div>
 					<div class="form-group">
 						<label>Telefone</label>
-						<input type="text" class="form-control" required>
+						<input id="telefoneAdd" type="text" class="form-control" required>
 					</div>					
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-					<input onclick="cadastrarEmpresa();" type="submit" class="btn btn-success" value="Adicionar">
+					<input type="submit" class="btn btn-success" value="Adicionar">
 				</div>
 			</form>
 		</div>

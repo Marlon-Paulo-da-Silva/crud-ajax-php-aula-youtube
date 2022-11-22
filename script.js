@@ -1,4 +1,9 @@
 
+nomeAdd = document.getElementById('nomeAdd');
+emailAdd = document.getElementById('emailAdd');
+enderecoAdd = document.getElementById('enderecoAdd');
+telefoneAdd = document.getElementById('telefoneAdd');
+
 
 // CREATE
 function cadastrarEmpresa() {
@@ -8,8 +13,10 @@ function cadastrarEmpresa() {
     url: 'api_cadastrar_empresa.php',
     method: 'POST', 
     data: {
-      nome: "Marlon",
-      telefone: "289959595"
+      nome: nomeAdd.value,
+      endereco: emailAdd.value,
+      email: enderecoAdd.value,
+      telefone: telefoneAdd.value,
     },
     success: function (data) {
       console.log(data);
@@ -17,6 +24,7 @@ function cadastrarEmpresa() {
     },
     dataType: 'json'
   });
+  console.log("fim cadastrar");
 }
 
 // READ
