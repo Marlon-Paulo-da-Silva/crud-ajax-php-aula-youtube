@@ -385,7 +385,7 @@ $(document).ready(function(){
 <div id="addEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form onsubmit="return cadastrarEmpresa()">
+			<form onsubmit="return false">
 				<div class="modal-header">						
 					<h4 class="modal-title">Adicionar Empresa</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -393,24 +393,24 @@ $(document).ready(function(){
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>Nome</label>
-						<input id="nomeAdd" type="text" class="form-control" required>
+						<input id="nomeAdd" type="text" class="form-control" required value="Marlon">
 					</div>
 					<div class="form-group">
 						<label>E-mail</label>
-						<input id="emailAdd" type="email" class="form-control" required>
+						<input id="emailAdd" type="email" class="form-control" required value="marlon@mail.com">
 					</div>
 					<div class="form-group">
 						<label>Endereço</label>
-						<textarea id="enderecoAdd" class="form-control" required></textarea>
+						<textarea id="enderecoAdd" class="form-control" required >rua tal</textarea>
 					</div>
 					<div class="form-group">
 						<label>Telefone</label>
-						<input id="telefoneAdd" type="text" class="form-control" required>
+						<input id="telefoneAdd" type="text" class="form-control" required value="34343">
 					</div>					
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-					<input type="submit" class="btn btn-success" value="Adicionar">
+					<input onclick="cadastrarEmpresa();" type="submit" class="btn btn-success" value="Adicionar">
 				</div>
 			</form>
 		</div>

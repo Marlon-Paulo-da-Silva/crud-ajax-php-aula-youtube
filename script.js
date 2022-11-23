@@ -20,10 +20,16 @@ function cadastrarEmpresa() {
     },
     success: function (data) {
       console.log(data);
-      console.log('SUCESSO');
+      if(data == "OK"){
+        console.log('SUCESSO');
+        $('#addEmployeeModal').modal('toggle');
+      } else {
+        console.log('ERRO');
+      }
     },
     dataType: 'json'
   });
+  // $('#addEmployeeModal').modal('toggle');
   console.log("fim cadastrar");
 }
 
